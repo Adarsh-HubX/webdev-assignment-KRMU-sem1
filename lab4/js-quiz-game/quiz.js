@@ -1,4 +1,3 @@
-// Multiple-choice quiz questions array
 const quizQuestions = [
   {
     question: "Which is the strongest password?",
@@ -57,20 +56,17 @@ const quizQuestions = [
   }
 ];
 
-// Function to run the quiz
 function runQuiz() {
   let score = 0;
 
   for (let i = 0; i < quizQuestions.length; i++) {
     let q = quizQuestions[i];
 
-    // Prepare the question text with options
     let promptText =
       `${q.question}\n\n` +
       `${q.options[0]}\n${q.options[1]}\n${q.options[2]}\n${q.options[3]}\n\n` +
       "Enter your answer (A, B, C, or D):";
 
-    // Get input
     let userAnswer = prompt(promptText);
 
     if (!userAnswer) {
